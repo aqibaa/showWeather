@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather App</title>
+    <link rel="shortcut icon" href="7133364.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container py-3">
+        <header>
+            <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+                <a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none">
+                   <img src="7133364.png" width="40" alt="">
+                    <span class="fs-4">Show Weather</span>
+                </a>
+
+
+
+
+                <nav class="d-flex mt-4 mt-md-0 ms-md-auto ">
+                    <form class="d-flex justify-content-centre align-items-center" role="search">
+                        <input id="city1" class="form-control me-2" type="search" placeholder="Enter A City Name"
+                            aria-label="Search" >
+                        <button class="btn btn-outline-success m-auto" type="submit" id="submit">Search</button>
+                    </form>
+                </nav>
+            </div>
+
+            <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+                <h1 class="display-4 fw-normal text-body-emphasis">Weather For <span id="cityname" style="color: rgb(255, 111, 0);"></span></h1>
+                <p class="fs-5 text-body-secondary">Live Weather of Cities!.</p>
+            </div>
+        </header>
+
+        <main>
+            <div class="row row-cols-1 row-cols-md-3 mb-3 ">
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm border-warning">
+                        <div class="card-header py-3 text-bg-warning border-warning">
+                            <h3 class="my-0 fw-normal" id="location">Location</h3>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title pricing-card-title">Country : <span id="country"></span> </h5>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>
+                                    <h4 class="card-title pricing-card-title">City : <span id="city"></span></h4>
+                                </li>
+                                <li>Region : <span id="region"></span></li>
+                                <li>TimeZone : <span id="timezone_id"></span></li>
+                                <li>Longitutde : <span id="long"></span></li>
+                                <li>Latitude : <span id="lat"></span></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm border-danger">
+                        <div class="card-header py-3 text-bg-danger border-danger">
+                            <h3 class="my-0 fw-normal">Current Conditions</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>CurrentTemperature : <span id="currtemp"></span></li>
+                                <li>FeelsLike : <span id="feelslike"></span></li>
+                                <li>Humidity : <span id="humidity"></span></li>
+                                <li>Visibility : <span id="visibility"> KM</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                        <div class="card-header py-3 text-bg-primary border-primary">
+                            <h3 class="my-0 fw-normal">Current Observation</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <h4 class="card-title pricing-card-title">About Wind</h4>
+                                <li>WindSpeed : <span id="speed"></span></li>
+                                <li>WindDirection : <span id="winddirection"></span></li>
+                                <li>WindChill : <span id="windchill"></span></li>
+                                <li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col m-auto">
+                    <div class="card mb-4 rounded-3 shadow-sm border-success">
+                        <div class="card-header py-3 text-bg-success border-success">
+                            <h3 class="my-0 fw-normal">About Rain</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled mt-3 mb-3">
+                                <li><b>CloudCover : <span id="cloudcover"></span></b></li>
+                                <li><b>Precipitation : <span id="precipitation"></span></b></li>
+                            </ul>
+                                <h3 class="my-0 fw-normal">Other</h3>
+                            <ul class="list-unstyled mt-2 mb-4">
+                                <li>DewPoint : <span id="dewpoint"></span></li>
+                                <li>HeatIndex : <span id="heatindex"></span></li>
+                                <li>UV : <span id="uv"></span></li>
+                                <li>Pressure : <span id="pressure"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>        
+    </div>
+    <script src="weather.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
